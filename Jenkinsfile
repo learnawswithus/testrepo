@@ -2,10 +2,13 @@ pipeline {
        agent any
        stages {
               stage ('build') {
-              sh 'echo "This is a build stage"'
+              echo "This is a build stage"'
+              }
+              stage ('Manual approval') {
+                     input " Deploy approval ? "
               }
               stage ('deploy') {
-              sh 'echo "This is a deploy stage"'
+              'echo "This is a deploy stage"'
               }
               
           }
